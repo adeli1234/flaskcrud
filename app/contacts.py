@@ -1,7 +1,7 @@
 from flask import Blueprint, request, render_template, redirect, url_for, flash
-from db import mysql
+from app.db import mysql
 
-contacts = Blueprint('contacts', __name__, template_folder='app/templates')
+contacts = Blueprint('contacts', __name__, template_folder='../templates')
 
 def get_db_connection():
     return mysql.connection
